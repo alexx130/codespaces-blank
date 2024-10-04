@@ -1,0 +1,12 @@
+// Import the youtube-search-api module
+const youtubesearchapi = require("youtube-search-api");
+
+// Perform a search for a keyword (e.g., "funny cats")
+youtubesearchapi.GetListByKeyword("eqis vs vila", false, 5)
+  .then(results => {
+    // Pretty print the results in JSON format
+    console.log(JSON.stringify(results.items, null, 2));
+  })
+  .catch(error => {
+    console.error(error);  // Log any errors
+  });
